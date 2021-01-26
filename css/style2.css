@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,700;1,700;1,900&display=swap');
+
+
+*{
+ margin: 0;
+ padding: 0;
+ list-style: none;
+ text-decoration: none;
+ font-family: 'Hind Siliguri', sans-serif;
+}
+
+body{
+ width: 100%;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*** CALENDAR ***/
+
+.calendar_table{
+  width: 90%;
+  height:calc(100vh - 128px);
+}
+
+.calendar_table td{
+  padding: 10px;
+  border: 1px solid #CCC;
+  vertical-align: top;
+  width: 14.29%;
+  height: 20%;
+}
+
+.calendar_table--6weeks td{
+  height: 16.66%;
+}
+
+.calendar-weekday{
+  color: #2B544C;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.calendar-day{
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFF;
+  font-size: 1em;
+  background-color: rgba(43, 84, 76,0.5);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.3s;
+  box-shadow: 0, 6px 10px 0 #000;
+}
+
+.calendar-other .calendar-day{
+  opacity:0.3;
+  color: #2B544C;
+}
+
+.calendar-day:hover{
+  text-decoration: none;
+  color :  #FFF;
+  transform: scale(1.2);
+}
+
+.calendar-day a{
+  text-decoration: none;
+  color: white;
+}
+
+.calendar-event{
+  display: flex;
+  text-align: center;
+  width: 112.5%;
+  height: 37%;
+  background-color: #2B544C;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: -10px;
+}
+
+.calendar-event a{
+  text-decoration: none;
+  color:white;
+}
+
+.navbar-brand{
+  text-transform: uppercase;
+}
+
+#planning-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 10px;
+  border-bottom: 1px solid black;
+}
+
+#planning-nav h1{
+  font-size: 25px;
+  color: #D2EAE5;
+}
+
+
+#planning-nav p{
+  display: flex;
+  padding-left: 1.5%;
+  font-size: 20px;
+  color: #077C62;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+
+#next-button{
+  display: flex;
+  width: 5.5%;
+  justify-content: space-between;
+  margin-right: 1.5%;
+}
+
+#next-button a{
+ color: #077C62;
+}
+
+#container-planning{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5%;
+}
+
+
+/* - - - - - - - add button - - - - - - - */
+
+#box-button{
+  display: flex;
+  margin-top: -4.5%;
+  margin-bottom: 2.5%;
+}
+
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cdcdcd;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.5s ease-in-out;
+}
+
+.add-btn:hover {
+  width: 200px;
+}
+
+.add-btn::before,
+.add-btn::after {
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 10px;
+  top: calc(50% - 2px);
+  background: #077C62;
+}
+
+.add-btn::after {
+  right: 14px;
+  overflow: hidden;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.add-btn::before {
+  left: 14px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.icon-btn:focus {
+  outline: none;
+}
+.btn-txt {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.add-btn:hover::before,
+.add-btn:hover::after {
+  width: 4px;
+  border-radius: 2px;
+}
+
+.add-btn:hover .btn-txt {
+  opacity: 1;
+}
+
+.add-icon::after,
+.add-icon::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  top: calc(50% - 10px);
+  background:#077C62;
+  overflow: hidden;
+}
+
+.add-icon::before {
+  left: 22px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.add-icon::after {
+  right: 22px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.add-btn:hover .add-icon::before {
+  left: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+
+.add-btn:hover .add-icon::after {
+  right: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+
+.icon-btn a{
+  text-decoration: none;
+  color: black;
+}
+
+#puce{
+  display: none;
+}
+
+#resa {
+  display: none;
+}
+
+/*** RESPONSIVE PLANNING ***/
+
+@media screen and (max-width:980px){
+
+  #planning-nav{
+    flex-direction: column;
+    padding-top: 5%;
+    padding-bottom: 7.5%;
+    height: 20vh;
+  }
+
+  #planning-nav h1{
+    font-size: 15px;
+  }
+
+  #planning-nav p{
+    font-size: 15px;
+    font-weight: bold;
+    order :+1;    
+    }
+
+  #box-button{
+    margin-top: -8.5%;
+  }
+
+  #next-button{
+    order :+1;
+    margin: 0;
+    width: 20%;
+  }
+
+  .btn-light{
+    font-size: 10px;
+    background-color: #077C62;
+    color: white;
+  }
+
+  .calendar-weekday{
+    font-size: 10px;
+    text-align: center;
+    background-color: #110D57;
+    display: none;
+  }
+  
+  .calendar-day{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .calendar_table td{
+    padding: 5px;
+    border: none;
+    width: 11.5%;
+    height: 10%;
+    border-top: #2B544C 1px solid;
+  }
+
+ .calendar_table--6weeks td{
+    height: 10%;
+  }
+
+  .calendar_table{
+    width: 95%;
+  }
+
+  .calendar-event{
+    height: 40%;
+    background-color: aquamarine;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  #puce{
+    display: flex;
+    margin-top: 5%;
+  }
+
+  .calendar-event{
+    display: none;
+  }
+
+  #next-button a{
+    color: white;
+  }
+
+}
