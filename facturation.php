@@ -30,7 +30,7 @@ $page_selected = 'gestion_reservation';
         try
         {
             //CONNEXION BDD
-            $connexion1=new PDO("mysql:host=localhost;dbname=camping",'root','root');
+            $connexion1=new PDO("mysql:host=localhost;dbname=camping",'root','');
             // DEFINITION MODE D'ERREUR PDO SUR EXCEPTION
             $connexion1->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             
@@ -202,7 +202,7 @@ $page_selected = 'gestion_reservation';
                 try
                 {
                      //CONNEXION BDD
-                    $connexion=new PDO("mysql:host=localhost;dbname=camping",'root','root');
+                    $connexion=new PDO("mysql:host=localhost;dbname=camping",'root','');
                     // DEFINITION MODE D'ERREUR PDO SUR EXCEPTION
                     $connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                     

@@ -3,7 +3,7 @@
         try
         {
             //CONNEXION BDD
-            $connexion=new PDO("mysql:host=localhost;dbname=camping",'root','root');
+            $connexion=new PDO("mysql:host=localhost;dbname=camping",'root','');
             // DEFINITION MODE D'ERREUR PDO SUR EXCEPTION
             $connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             
